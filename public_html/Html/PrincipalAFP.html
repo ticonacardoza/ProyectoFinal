@@ -6,90 +6,70 @@
   <title>AFP Seguro - Resumen</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="../Css/StylePrincipal.css">
+  <link rel="stylesheet" href="../Css/StyleOpciones.css">
 </head>
 <body>
     
-    
-    <!-- HEADER PRINCIPAL -->
   <header class="main-header">
     <div class="top-bar">
-      <!-- Logo -->
       <div class="logo">
-       
         <div>
           <span class="afp-name">AFP Seguro</span>
           <span class="slogan">Tu futuro, nuestro compromiso</span>
         </div>
       </div>
 
-      <!-- Menú Principal -->
-      <nav class="main-menu">
-        <a href="#" class="active">Inicio</a>
-        <a href="#">Mis Ahorros</a>
-        <a href="#">Simuladores</a>
-        <a href="#">Trámites</a>
-        <a href="#">Educación Financiera</a>
-        <a href="#">Contacto</a>
-      </nav>
-
-      <!-- Información del Usuario -->
       <div class="user-section">
+        
+        <div class="user-profile">
+          <div class="user-info">
+            <div class="user-main-data">
+              <span class="greeting">Hola, Juan Pérez</span>
+              <span class="dni">DNI: 12345678</span>
+            </div>
+            <div class="user-fund-box">
+              <span class="user-fund-type"><i class="fas fa-chart-pie"></i> Tipo 2 - Moderado</span>
+            </div>
+          </div>
+          <div class="dropdown-arrow">▼</div>
+        </div>
+        
         <div class="notification">
           <span class="bell">🔔</span>
           <span class="notification-count">3</span>
         </div>
-
-        <div class="user-profile">
-          
-          <div class="user-info">
-            <span class="greeting">Hola, Juan Pérez</span>
-            <span class="dni">DNI: 12345678</span>
-          </div>
-          <div class="dropdown-arrow">▼</div>
-        </div>
       </div>
     </div>
 
-    <!-- BARRA SECUNDARIA (más extendida) -->
     <div class="secondary-bar">
-      <div class="container">
-        <div class="fund-info">
-          <span class="label">Fondo Actual:</span>
-          <span class="fund-type">Tipo 2 - Moderado</span>
-        </div>
-        
-        <div class="quick-links">
-          <a href="#">Ver saldo detallado</a>
-          <a href="#">Rentabilidad</a>
-          <a href="#">Movimientos</a>
-          <a href="#">Retiros</a>
-        </div>
-
-        <div class="last-update">
-          Actualizado al 22 de mayo de 2026
-        </div>
+      <div class="container-links">
+          <p class="aviso">Descubre nuestros nuevos planes de seguros especialmente hechos para ti</p>     
       </div>
     </div>
   </header>
 
   <div class="dashboard-container">
+    
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input">
+    <label for="sidebar-toggle" class="sidebar-toggle-label">
+      <i class="fas fa-sliders-h"></i> <span>Mostrar menú de cuenta</span>
+    </label>
 
     <aside class="sidebar">
       <div class="sidebar-header">
         <h3>Mi Cuenta</h3>
       </div>
-      
       <nav class="sidebar-nav">
-        <a href="#" class="nav-item active"><i class="fas fa-chart-pie"></i> Resumen</a>
-        <a href="#" class="nav-item"><i class="fas fa-piggy-bank"></i> Mi Ahorro</a>
-        <a href="#" class="nav-item"><i class="fas fa-file-invoice-dollar"></i> Estado de Cuenta</a>
-        <a href="#" class="nav-item"><i class="fas fa-exchange-alt"></i> Movimientos</a>
-        <a href="#" class="nav-item"><i class="fas fa-chart-line"></i> Rentabilidad</a>
-        <a href="#" class="nav-item"><i class="fas fa-folder-open"></i> Mis Trámites</a>
+        <a href="PrincipalAFP.html" class="nav-item active"><i class="fas fa-chart-pie"></i> Resumen</a>
+        <a href="MiAhorroAFP.html" class="nav-item"><i class="fas fa-piggy-bank"></i> Mi Ahorro</a>
+        <a href="EstadoCuentaAFP.html" class="nav-item"><i class="fas fa-file-invoice-dollar"></i> Estado de Cuenta</a>        
+        <a href="MovimientosAFP.html" class="nav-item"><i class="fas fa-exchange-alt"></i> Movimientos</a>
+        <a href="RentabilidadAFP.html" class="nav-item"><i class="fas fa-chart-line"></i> Rentabilidad</a>
+        <a href="TramitesAFP.html" class="nav-item"><i class="fas fa-folder-open"></i> Mis Trámites</a>
         <a href="#" class="nav-item"><i class="fas fa-file-alt"></i> Documentos</a>
-        <a href="#" class="nav-item"><i class="fas fa-cog"></i> Configuración</a>
+        <a href="ConfiguracionAFP.html" class="nav-item"><i class="fas fa-cog"></i> Configuración</a>
         <div class="sidebar-divider"></div>
-        <a href="#" class="nav-item logout"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+        <a href="LoginAFP.html" class="nav-item logout"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
       </nav>
       
       <div class="sidebar-footer">
@@ -142,23 +122,18 @@
 
       <div class="charts-row">
         <div class="chart-box">
-  <div class="chart-header">
-    <h3><i class="fas fa-chart-area"></i> Evolución de tu ahorro</h3>
-  </div>
-
-            <img src="Imagen/Gra.png" alt="Gráfico de Evolución" 
-       style="display: block; margin: 0 auto; max-width: 100%; max-height: 220px; object-fit: contain; border-radius: 8px;">
-</div>
+          <div class="chart-header">
+            <h3><i class="fas fa-chart-area"></i> Evolución de tu ahorro</h3>
+          </div>
+          <img src="../Imagen/Gra.png" alt="Gráfico de Evolución" style="display: block; margin: 0 auto; max-width: 100%; max-height: 220px; object-fit: contain; border-radius: 8px;">
+        </div>
         
         <div class="chart-box">
-            
-  <div class="chart-header">
-    <h3><i class="fas fa-chart-pie"></i> Composición de tu ahorro</h3>
-  </div>
-
-            <img src="Imagen/GraCircular.png" alt="Gráfico Circular" 
-       style="display: block; margin: 0 auto; max-width: 100%; height: 220px; object-fit: contain; border-radius: 8px;">
-</div>
+          <div class="chart-header">
+            <h3><i class="fas fa-chart-pie"></i> Composición de tu ahorro</h3>
+          </div>
+          <img src="../Imagen/GraCircular.png" alt="Gráfico Circular" style="display: block; margin: 0 auto; max-width: 100%; height: 220px; object-fit: contain; border-radius: 8px;">
+        </div>
       </div>
 
       <div class="bottom-section">
@@ -197,22 +172,10 @@
         <div class="accesos-rapidos">
           <h3><i class="fas fa-bolt"></i> Accesos rápidos</h3>
           <div class="quick-grid">
-            <a href="#" class="quick-card-btn">
-              <i class="fas fa-calculator"></i>
-              <span>Simulación de pensión</span>
-            </a>
-            <a href="#" class="quick-card-btn">
-              <i class="fas fa-hand-holding-usd"></i>
-              <span>Solicitud de retiro</span>
-            </a>
-            <a href="#" class="quick-card-btn">
-              <i class="fas fa-file-signature"></i>
-              <span>Certificado de saldo</span>
-            </a>
-            <a href="#" class="quick-card-btn">
-              <i class="fas fa-sliders-h"></i>
-              <span>Cambio de fondo</span>
-            </a>
+            <a href="#" class="quick-card-btn"><i class="fas fa-calculator"></i><span>Simulación de pensión</span></a>
+            <a href="#" class="quick-card-btn"><i class="fas fa-hand-holding-usd"></i><span>Solicitud de retiro</span></a>
+            <a href="#" class="quick-card-btn"><i class="fas fa-file-signature"></i><span>Certificado de saldo</span></a>
+            <a href="#" class="quick-card-btn"><i class="fas fa-sliders-h"></i><span>Cambio de fondo</span></a>
           </div>
         </div>
       </div>
@@ -228,93 +191,25 @@
           <span>[Imagen Familiar]</span>
         </div>
       </div>
-
     </main>
   </div>
-    <!-- Fhoter -->
-    
-<footer class="footer">
-        <div class="container-footer">
 
-            <div class="footer-top">
-                <div class="support-info">
-                    <h3>Te atendemos las 24 horas</h3>
-                    <p>Haz tus trámites y consultas sin salir de casa</p>
-                </div>
-                <div class="support-options">
-                    <a href="#" class="support-btn">
-                        <i class="fas fa-comment-dots"></i> Chatea con Irene
-                    </a>
-                    <a href="#" class="support-btn">
-                        <i class="fas fa-envelope"></i> Envíanos un correo
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-links">
-                
-                <div class="footer-column">
-                    <h4>Todo sobre AFP Seguro</h4>
-                    <a href="#">Grupo SURA</a>
-                    <a href="#">Nosotros</a>
-                    <a href="#">Nuestro equipo de inversiones</a>
-                    <a href="#">Cumplimiento</a>
-                    <a href="#">Sostenibilidad</a>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Gobierno Corporativo</h4>
-                    <a href="#">Gobierno Corporativo</a>
-                    <a href="#">Accionistas</a>
-                    <a href="#">Directorio</a>
-                    <a href="#">Alta Gerencia</a>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Legales</h4>
-                    <a href="#">Deberes y Derechos del Afiliado</a>
-                    <a href="#">Términos y Condiciones</a>
-                    <a href="#">Política de Privacidad</a>
-                    <a href="#">Libro de Reclamaciones</a>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Contáctanos</h4>
-                    <p><strong>Línea gratuita:</strong> 0800 40 110</p>
-                    <p><strong>Arequipa:</strong> (054) 123 456</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 1234, Arequipa</p>
-                    
-                    <div class="app-download">
-                        <p><strong>Descarga nuestra app</strong></p>
-                        <div class="app-buttons">
-                            <a href="#" class="app-btn">Apple Store</a>
-                            <a href="#" class="app-btn">Google Play</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>AFP Seguro</span>
-                    </div>
-                    
-                    <div class="social-icons">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    </div>
-                </div>
-
-                <p class="copyright">© 2026 AFP Seguro - Todos los derechos reservados</p>
-            </div>
-
+  <footer class="footer">
+    <div class="container-footer">
+      <div class="footer-top">
+        <div class="support-info">
+          <h3>Te atendemos las 24 horas</h3>
+          <p>Haz tus trámites y consultas sin salir de casa</p>
         </div>
-    </footer>
+        <div class="support-options">
+          <a href="#" class="support-btn"><i class="fas fa-comment-dots"></i> Chatea con Irene</a>
+          <a href="#" class="support-btn"><i class="fas fa-envelope"></i> Envíanos un correo</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 AFP Seguro - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

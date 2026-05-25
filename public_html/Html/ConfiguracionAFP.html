@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración - AFP Seguro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../Css/StylePrincipal.css">
+  <link rel="stylesheet" href="../Css/StyleOpciones.css">
+</head>
+<body>
+    
+  <header class="main-header">
+    <div class="top-bar">
+      <div class="logo">
+        <div>
+          <span class="afp-name">AFP Seguro</span>
+          <span class="slogan">Tu futuro, nuestro compromiso</span>
+        </div>
+      </div>
+
+      <div class="user-section">
+        
+        <div class="user-profile">
+          <div class="user-info">
+            <div class="user-main-data">
+              <span class="greeting">Hola, Juan Pérez</span>
+              <span class="dni">DNI: 12345678</span>
+            </div>
+            <div class="user-fund-box">
+              <span class="user-fund-type"><i class="fas fa-chart-pie"></i> Tipo 2 - Moderado</span>
+            </div>
+          </div>
+          <div class="dropdown-arrow">▼</div>
+        </div>
+        
+        <div class="notification">
+          <span class="bell">🔔</span>
+          <span class="notification-count">3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondary-bar">
+      <div class="container-links">
+          <p class="aviso">Descubre nuestros nuevos planes de seguros especialmente hechos para ti</p>     
+      </div>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input">
+    <label for="sidebar-toggle" class="sidebar-toggle-label">
+      <i class="fas fa-sliders-h"></i> <span>Mostrar menú de cuenta</span>
+    </label>
+
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h3>Mi Cuenta</h3>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="PrincipalAFP.html" class="nav-item"><i class="fas fa-chart-pie"></i> Resumen</a>
+        <a href="MiAhorroAFP.html" class="nav-item"><i class="fas fa-piggy-bank"></i> Mi Ahorro</a>
+        <a href="EstadoCuentaAFP.html" class="nav-item"><i class="fas fa-file-invoice-dollar"></i> Estado de Cuenta</a>
+        <a href="MovimientosAFP.html" class="nav-item"><i class="fas fa-exchange-alt"></i> Movimientos</a>
+        <a href="RentabilidadAFP.html" class="nav-item"><i class="fas fa-chart-line"></i> Rentabilidad</a>
+        <a href="TramitesAFP.html" class="nav-item"><i class="fas fa-folder-open"></i> Mis Trámites</a>
+        <a href="#" class="nav-item"><i class="fas fa-file-alt"></i> Documentos</a>
+        <a href="ConfiguracionAFP.html" class="nav-item active"><i class="fas fa-cog"></i> Configuración</a>
+        <div class="sidebar-divider"></div>
+        <a href="LoginAFP.html" class="nav-item logout"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+        
+        <div class="sidebar-footer">
+        <div class="help-card">
+          <i class="fas fa-headset help-icon"></i>
+          <h4>¿Necesitas ayuda?</h4>
+          <p>Estamos listos para asesorarte en lo que necesites.</p>
+          <button class="contact-btn">Contáctanos</button>
+        </div>
+      </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="header-content">
+        <h1>Configuración de la Cuenta</h1>
+        <p class="subtitle">Gestiona tus preferencias de seguridad, avisos y datos de contacto.</p>
+      </div>
+
+      <div class="configuracion-paneles">
+        <div class="config-card">
+          <h3><i class="fas fa-user-edit"></i> Información de Contacto</h3>
+          <form class="config-form">
+            <div class="form-row">
+              <div class="field-group">
+                <label>Correo Electrónico</label>
+                <input type="email" value="juan.perez@correo.com">
+              </div>
+              <div class="field-group">
+                <label>Celular / Teléfono</label>
+                <input type="tel" value="987654321">
+              </div>
+            </div>
+            <div class="field-group">
+              <label>Dirección Domiciliaria</label>
+              <input type="text" value="Av. Principal 123, Yanahuara">
+            </div>
+            <button type="button" class="btn-guardar">Actualizar Datos</button>
+          </form>
+        </div>
+
+        <div class="config-card">
+          <h3><i class="fas fa-shield-alt"></i> Cambiar Contraseña</h3>
+          <form class="config-form">
+            <div class="field-group">
+              <label>Contraseña Actual</label>
+              <input type="password" placeholder="••••••••">
+            </div>
+            <div class="form-row">
+              <div class="field-group">
+                <label>Nueva Contraseña</label>
+                <input type="password" placeholder="Mínimo 8 caracteres">
+              </div>
+              <div class="field-group">
+                <label>Confirmar Nueva Contraseña</label>
+                <input type="password" placeholder="Repite la contraseña">
+              </div>
+            </div>
+            <button type="button" class="btn-guardar">Modificar Clave</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
