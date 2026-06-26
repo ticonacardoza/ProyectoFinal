@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguros - AFP Seguro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../CSS/StyleLogin.css"> <link rel="stylesheet" href="../CSS/StyleSeguros.css"> </head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="LoginAFP.html" class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>AFP <span>Seguro</span></h1>
+                </a>
+                
+                <nav class="public-menu">
+                    <a href="LoginAFP.html">Inicio</a>
+                    <a href="SegurosAFP.html" class="active">Seguros</a>
+                    <a href="#">Conócenos</a>
+                </nav>
+
+                <div class="actions">
+                    <a href="#loginModal" class="btn login">
+                        <i class="fas fa-user"></i> Iniciar sesión
+                    </a>
+                    <a href="#registerModal" class="btn register">
+                        Crear cuenta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero hero-seguros">
+        <div class="container">
+            <div class="hero-center">
+                <h2>Protección integral para ti y tu familia</h2>
+                <p>Nuestros seguros complementan tu fondo de pensiones para brindarte tranquilidad en cada etapa de tu vida.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            
+            <div class="modal-header">
+                <i class="fas fa-lock"></i>
+                <h2>Acceso Seguro</h2>
+                <p>Ingresa con tu cuenta AFP</p>
+            </div>
+
+            <div class="modal-form">
+                <label>Tipo de documento</label>
+                <select>
+                    <option value="DNI">DNI</option>
+                    <option value="PASAPORTE">Pasaporte</option>
+                </select>
+
+                <label>Número de documento</label>
+                <input type="text" placeholder="Ingresa tu DNI o Pasaporte">
+
+                <label>Contraseña</label>
+                <input type="password" placeholder="Ingresa tu contraseña">
+
+                <a href="PrincipalAFP.html"><button class="btn-login-modal">Iniciar sesión</button></a>
+
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+                <div class="register-link">
+                    ¿No tienes una cuenta? 
+                    <a href="#registerModal">Regístrate aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MODAL REGISTRO (CREAR CUENTA) ================= -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            
+            <div class="modal-header">
+                <i class="fas fa-user-plus"></i>
+                <h2>Crear Cuenta</h2>
+                <p>Únete a AFP Seguro y protege tu futuro</p>
+            </div>
+
+            <div class="modal-form">
+                <label>Tipo de documento</label>
+                <select>
+                    <option value="DNI">DNI</option>
+                    <option value="PASAPORTE">Pasaporte</option>
+                </select>
+
+                <label>Número de documento</label>
+                <input type="text" placeholder="Ej: 76543212">
+
+                <label>Nombres completos</label>
+                <input type="text" placeholder="Ingresa tus nombres">
+
+                <label>Apellidos completos</label>
+                <input type="text" placeholder="Ingresa tus apellidos">
+
+                <label>Fecha de nacimiento</label>
+                <input type="date">
+
+                <label>Género</label>
+                <select>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+                <label>Correo electrónico</label>
+                <input type="email" placeholder="ejemplo@correo.com">
+
+                <label>Teléfono / Celular</label>
+                <input type="tel" placeholder="Ej: 987 654 321">
+
+                <label>Dirección</label>
+                <input type="text" placeholder="Ingresa tu dirección actual">
+
+                <label>Contraseña</label>
+                <input type="password" placeholder="Crea una contraseña segura">
+
+                <label>Confirmar contraseña</label>
+                <input type="password" placeholder="Repite tu contraseña">
+
+                <a href="PrincipalAFP.html"><button class="btn-register-modal">Crear mi cuenta</button></a>
+
+                <div class="register-link">
+                    ¿Ya tienes una cuenta? 
+                    <a href="#loginModal">Inicia sesión aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="planes-seguros">
+        <div class="container">
+            <h2 class="section-title">Conoce nuestros planes</h2>
+            <div class="seguros-grid">
+                
+                <div class="seguro-card">
+                    <div class="seguro-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Seguro de Vida</h3>
+                    <p>Un respaldo económico directo para tus beneficiarios en caso de fallecimiento, asegurando el futuro de los que más amas.</p>
+                    <ul class="seguro-beneficios">
+                        <li><i class="fas fa-check"></i> Cobertura hasta S/ 500,000</li>
+                        <li><i class="fas fa-check"></i> Sin evaluación médica previa</li>
+                        <li><i class="fas fa-check"></i> Asistencia funeraria incluida</li>
+                    </ul>
+                    <a href="#" class="btn-cotizar">Cotizar ahora</a>
+                </div>
+
+                <div class="seguro-card destacado">
+                    <div class="badge-recomendado">Más Solicitado</div>
+                    <div class="seguro-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3>Seguro de Invalidez</h3>
+                    <p>Garantiza una pensión mensual si sufres un accidente o enfermedad que te impida continuar trabajando.</p>
+                    <ul class="seguro-beneficios">
+                        <li><i class="fas fa-check"></i> Renta mensual vitalicia</li>
+                        <li><i class="fas fa-check"></i> Cobertura por accidentes al 100%</li>
+                        <li><i class="fas fa-check"></i> Rehabilitación cubierta</li>
+                    </ul>
+                    <a href="#" class="btn-cotizar">Cotizar ahora</a>
+                </div>
+
+                <div class="seguro-card">
+                    <div class="seguro-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Seguro de Sobrevivencia</h3>
+                    <p>Protege a tu cónyuge e hijos menores con una pensión mensual en caso de que tú llegues a faltar.</p>
+                    <ul class="seguro-beneficios">
+                        <li><i class="fas fa-check"></i> Pensión para cónyuge e hijos</li>
+                        <li><i class="fas fa-check"></i> Pago de estudios superiores</li>
+                        <li><i class="fas fa-check"></i> Asesoría legal gratuita</li>
+                    </ul>
+                    <a href="#" class="btn-cotizar">Cotizar ahora</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-top">
+                <div class="support-info">
+                    <h3>Te atendemos las 24 horas</h3>
+                    <p>Haz tus trámites y consultas sin salir de casa</p>
+                </div>
+                <div class="support-options">
+                    <a href="#" class="support-btn"><i class="fas fa-comment-dots"></i> Chatea con Irene</a>
+                    <a href="#" class="support-btn"><i class="fas fa-envelope"></i> Envíanos un correo</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 AFP Seguro - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

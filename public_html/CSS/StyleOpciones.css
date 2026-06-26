@@ -1,0 +1,472 @@
+/* ================= MI AHORRO Estilos ================= */
+.ahorro-hero-card {
+  background: linear-gradient(135deg, #1e3a8a 0%, #00b4d8 100%);
+  color: white;
+  padding: 35px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  box-shadow: 0 10px 25px rgba(0, 180, 216, 0.2);
+}
+
+.ahorro-info h3 {
+  font-weight: 500;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.monto-destacado {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.ahorro-meta {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  width: 40%;
+}
+
+.barra-progreso-contenedor {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.barra-progreso {
+  height: 100%;
+  background: #22c55e; 
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.meta-textos {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cuentas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cuenta-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s;
+}
+
+.cuenta-card:hover {
+  transform: translateY(-5px);
+  border-color: #00b4d8;
+}
+
+.cuenta-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 15px;
+}
+
+.cuenta-icon {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  background: #eff6ff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.cuenta-body .monto {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.cuenta-body .detalle {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* ================= MOVIMIENTOS ESTILOS ================= */
+.filtros-movimientos {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin: 30px 0;
+}
+
+.filtros-form {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.input-group select,
+.input-group input {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.input-group select:focus,
+.input-group input:focus {
+  border-color: #00b4d8;
+}
+
+.btn-filtrar {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 40px;
+  transition: background 0.3s;
+}
+
+.btn-filtrar:hover {
+  background: #00b4d8;
+}
+
+.tabla-completa-container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+}
+
+.text-danger { color: #ef4444; }
+
+@media (max-width: 992px) {
+  .ahorro-hero-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+  .ahorro-meta { width: 100%; }
+  .cuentas-grid { grid-template-columns: repeat(2, 1fr); }
+  .filtros-form { flex-direction: column; align-items: stretch; }
+}
+
+@media (max-width: 680px) {
+  .cuentas-grid { grid-template-columns: 1fr; }
+}
+
+/* ================= ESTADO DE CUENTA ESTILOS ================= */
+.alert-info {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  color: #1e3a8a;
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin: 25px 0;
+  font-size: 0.95rem;
+}
+
+.archivos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.archivo-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.3s ease;
+}
+
+.archivo-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-color: #cbd5e1;
+}
+
+.archivo-icono.pdf {
+  font-size: 2rem;
+  color: #ef4444; /* Rojo PDF */
+  margin-right: 20px;
+}
+
+.archivo-detalles {
+  flex: 1;
+}
+
+.archivo-detalles h4 {
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.archivo-detalles p {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.btn-descargar {
+  background: #f8fafc;
+  color: #1e3a8a;
+  border: 1px solid #cbd5e1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-descargar:hover {
+  background: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}
+
+/* ================= RENTABILIDAD ESTILOS ================= */
+.rentabilidad-card {
+  text-align: center;
+}
+
+.rentabilidad-card h2 {
+  font-size: 2.2rem;
+}
+
+/* ================= RESPONSIVE VISTAS INTERNAS ================= */
+@media (max-width: 680px) {
+  .archivo-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .archivo-icono.pdf {
+    margin-right: 0;
+  }
+  .btn-descargar {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ================= MIS TRÁMITES ESTILOS ================= */
+.tramites-interno-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.tramite-box {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tramite-box summary {
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a2a43;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.tramite-box summary::-webkit-details-marker {
+  display: none;
+}
+
+.box-title i {
+  color: #00b4d8;
+  margin-right: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+.tramite-box[open] .arrow-icon {
+  transform: rotate(180deg);
+  color: #00b4d8;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+  color: #64748b;
+}
+
+.box-content {
+  padding: 20px;
+  border-top: 1px solid #f1f5f9;
+  color: #475569;
+  background: #fafbfc;
+}
+
+.form-tramite-estatico {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.form-tramite-estatico select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.btn-accion-tramite {
+  background: #00b4d8;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.btn-accion-tramite:hover {
+  background: #1e3a8a;
+}
+
+.link-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ================= CONFIGURACIÓN ESTILOS ================= */
+.configuracion-paneles {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.config-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.config-card h3 {
+  color: #0a2a43;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 10px;
+}
+
+.config-card h3 i {
+  color: #00b4d8;
+  margin-right: 10px;
+}
+
+.config-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.field-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.field-group input {
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #334155;
+  outline: none;
+}
+
+.field-group input:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.15);
+}
+
+.btn-guardar {
+  align-self: flex-start;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-guardar:hover {
+  background: #00b4d8;
+}
+
+/* ================= RESPONSIVE ADICIONAL ================= */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .btn-guardar, .btn-accion-tramite {
+    width: 100%;
+  }
+}
