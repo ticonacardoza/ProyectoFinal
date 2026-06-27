@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Configuración - AFP Seguro</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="../Css/StylePrincipal.css">
-  <link rel="stylesheet" href="../Css/StyleOpciones.css">
+  <link href="../CSS/Style.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
+<body class="bodyPrincipal">
     
-  <header class="main-header">
+  <header class="mainPrincipal-headerPrincipal">
     <div class="top-bar">
-      <div class="logo">
+      <div class="logoPrincipal">
         <div>
           <span class="afp-name">AFP Seguro</span>
           <span class="slogan">Tu futuro, nuestro compromiso</span>
@@ -23,7 +22,7 @@
         
         <div class="user-profile">
           <div class="user-info">
-            <div class="user-main-data">
+            <div class="user-mainPrincipal-data">
               <span class="greeting">Hola, Juan Pérez</span>
               <span class="dni">DNI: 12345678</span>
             </div>
@@ -42,35 +41,37 @@
     </div>
 
     <div class="secondary-bar">
-      <div class="container-links">
+      <div class="containerPrincipal-links">
           <p class="aviso">Descubre nuestros nuevos planes de seguros especialmente hechos para ti</p>     
       </div>
     </div>
   </header>
 
-  <div class="dashboard-container">
+  <div class="dashboard-containerPrincipal">
+    
     <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input">
     <label for="sidebar-toggle" class="sidebar-toggle-label">
       <i class="fas fa-sliders-h"></i> <span>Mostrar menú de cuenta</span>
     </label>
 
     <aside class="sidebar">
-      <div class="sidebar-header">
+      <div class="sidebar-headerPrincipal">
         <h3>Mi Cuenta</h3>
       </div>
       <nav class="sidebar-nav">
         <a href="PrincipalAFP.html" class="nav-item"><i class="fas fa-chart-pie"></i> Resumen</a>
         <a href="MiAhorroAFP.html" class="nav-item"><i class="fas fa-piggy-bank"></i> Mi Ahorro</a>
-        <a href="EstadoCuentaAFP.html" class="nav-item"><i class="fas fa-file-invoice-dollar"></i> Estado de Cuenta</a>
+        <a href="EstadoCuentaAFP.html" class="nav-item"><i class="fas fa-file-invoice-dollar"></i> Estado de Cuenta</a>        
         <a href="MovimientosAFP.html" class="nav-item"><i class="fas fa-exchange-alt"></i> Movimientos</a>
         <a href="RentabilidadAFP.html" class="nav-item"><i class="fas fa-chart-line"></i> Rentabilidad</a>
         <a href="TramitesAFP.html" class="nav-item"><i class="fas fa-folder-open"></i> Mis Trámites</a>
         <a href="#" class="nav-item"><i class="fas fa-file-alt"></i> Documentos</a>
         <a href="ConfiguracionAFP.html" class="nav-item active"><i class="fas fa-cog"></i> Configuración</a>
         <div class="sidebar-divider"></div>
-        <a href="LoginAFP.html" class="nav-item logout"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
-        
-        <div class="sidebar-footer">
+        <a href="LoginAFP.html" class="nav-item logoPrincipalut"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+      </nav>
+      
+      <div class="sidebar-footerPrincipal">
         <div class="help-card">
           <i class="fas fa-headset help-icon"></i>
           <h4>¿Necesitas ayuda?</h4>
@@ -78,76 +79,111 @@
           <button class="contact-btn">Contáctanos</button>
         </div>
       </div>
-      </nav>
     </aside>
 
-    <main class="main-content">
-      <div class="header-content">
+    <main class="mainPrincipal-content">
+      <div class="headerPrincipal-content">
         <h1>Configuración de la Cuenta</h1>
         <p class="subtitle">Gestiona tus preferencias de seguridad, avisos y datos de contacto.</p>
       </div>
 
-      <div class="configuracion-paneles">
-        <div class="config-card">
-          <h3><i class="fas fa-user-edit"></i> Información de Contacto</h3>
-          <form class="config-form">
-            <div class="form-row">
-              <div class="field-group">
-                <label>Correo Electrónico</label>
-                <input type="email" value="juan.perez@correo.com">
-              </div>
-              <div class="field-group">
-                <label>Celular / Teléfono</label>
-                <input type="tel" value="987654321">
-              </div>
-            </div>
-            <div class="field-group">
-              <label>Dirección Domiciliaria</label>
-              <input type="text" value="Av. Principal 123, Yanahuara">
-            </div>
-            <button type="button" class="btn-guardar">Actualizar Datos</button>
-          </form>
-        </div>
+      <div class="tramites-interno-container">
+            <h3 style="color: #0a2a43; margin-bottom: 15px;">Configuración de Cuenta</h3>
+            
+            <form id="form-configuracion">
+              
+              <details class="tramite-box">
+                <summary>Nombres y Apellidos <i class="fas fa-chevron-down arrow-icon"></i></summary>
+                <div class="box-content">
+                  <div class="form-row">
+                    <div class="field-group">
+                      <label style="font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Nombres</label>
+                      <input type="text" id="conf-nombres" placeholder="Tus nombres" style="padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%;">
+                    </div>
+                    <div class="field-group">
+                      <label style="font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Apellidos</label>
+                      <input type="text" id="conf-apellidos" placeholder="Tus apellidos" style="padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%;">
+                    </div>
+                  </div>
+                  <div style="text-align: right; margin-top: 15px;">
+                    <button type="button" id="btn-guardar-nombres" style="background: #1e3a8a; color: white; padding: 8px 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Guardar Nombres</button>
+                  </div>
+                </div>
+              </details>
 
-        <div class="config-card">
-          <h3><i class="fas fa-shield-alt"></i> Cambiar Contraseña</h3>
-          <form class="config-form">
-            <div class="field-group">
-              <label>Contraseña Actual</label>
-              <input type="password" placeholder="••••••••">
-            </div>
-            <div class="form-row">
-              <div class="field-group">
-                <label>Nueva Contraseña</label>
-                <input type="password" placeholder="Mínimo 8 caracteres">
-              </div>
-              <div class="field-group">
-                <label>Confirmar Nueva Contraseña</label>
-                <input type="password" placeholder="Repite la contraseña">
-              </div>
-            </div>
-            <button type="button" class="btn-guardar">Modificar Clave</button>
-          </form>
-        </div>
-      </div>
+              <details class="tramite-box">
+                <summary>Correo Electrónico <i class="fas fa-chevron-down arrow-icon"></i></summary>
+                <div class="box-content">
+                  <div class="field-group">
+                    <label style="font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Correo Actual</label>
+                    <input type="email" id="conf-correo" placeholder="correo@ejemplo.com" style="padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%;">
+                  </div>
+                  <div style="text-align: right; margin-top: 15px;">
+                    <button type="button" id="btn-guardar-correo" style="background: #1e3a8a; color: white; padding: 8px 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Guardar Correo</button>
+                  </div>
+                </div>
+              </details>
+
+              <details class="tramite-box">
+                <summary>Teléfono Celular <i class="fas fa-chevron-down arrow-icon"></i></summary>
+                <div class="box-content">
+                  <div class="field-group">
+                    <label style="font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Número de Celular Actual</label>
+                    <input type="text" id="conf-telefono" placeholder="Ej: 987654321" style="padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%;">
+                  </div>
+                  <div style="text-align: right; margin-top: 15px;">
+                    <button type="button" id="btn-guardar-telefono" style="background: #1e3a8a; color: white; padding: 8px 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Guardar Teléfono</button>
+                  </div>
+                </div>
+              </details>
+
+              <details class="tramite-box">
+                <summary>Dirección <i class="fas fa-chevron-down arrow-icon"></i></summary>
+                <div class="box-content">
+                  <div class="field-group">
+                    <label style="font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Dirección de Domicilio</label>
+                    <input type="text" id="conf-direccion" placeholder="Tu dirección actual" style="padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%;">
+                  </div>
+                  <div style="text-align: right; margin-top: 15px;">
+                    <button type="button" id="btn-guardar-direccion" style="background: #1e3a8a; color: white; padding: 8px 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Guardar Dirección</button>
+                  </div>
+                </div>
+              </details>
+
+              <details class="tramite-box">
+                <summary>Seguridad y Contraseña <i class="fas fa-chevron-down arrow-icon"></i></summary>
+                <div class="box-content">
+                  <div class="field-group">
+                    <label style="font-weight: 600; font-size: 0.9rem; margin-bottom: 5px;">Nueva Contraseña</label>
+                    <input type="password" id="conf-password" placeholder="Escribe tu nueva clave" style="padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%;">
+                  </div>
+                  <div style="text-align: right; margin-top: 15px;">
+                    <button type="button" id="btn-guardar-password" style="background: #1e3a8a; color: white; padding: 8px 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Actualizar Contraseña</button>
+                  </div>
+                </div>
+              </details>
+
+            </form>
+          </div>
     </main>
   </div>
-    <footer class="footer">
-    <div class="container-footer">
-      <div class="footer-top">
-        <div class="support-info">
+    <footer class="footerPrincipal">
+    <div class="containerPrincipal-footerPrincipal">
+      <div class="footerPrincipal-top">
+        <div class="supportPrincipal-info">
           <h3>Te atendemos las 24 horas</h3>
           <p>Haz tus trámites y consultas sin salir de casa</p>
         </div>
-        <div class="support-options">
-          <a href="#" class="support-btn"><i class="fas fa-comment-dots"></i> Chatea con Irene</a>
-          <a href="#" class="support-btn"><i class="fas fa-envelope"></i> Envíanos un correo</a>
+        <div class="supportPrincipal-options">
+          <a href="#" class="supportPrincipal-btn"><i class="fas fa-comment-dots"></i> Chatea con Irene</a>
+          <a href="#" class="supportPrincipal-btn"><i class="fas fa-envelope"></i> Envíanos un correo</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="copyright">© 2026 AFP Seguro - Todos los derechos reservados</p>
+      <div class="footerPrincipal-bottom">
+        <p class="copyrightPrincipal">© 2026 AFP Seguro - Todos los derechos reservados</p>
       </div>
     </div>
   </footer>
+    <script src="../JAVASCRIPT/javascript.js"></script>
 </body>
 </html>

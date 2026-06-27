@@ -6,7 +6,7 @@
     <title>AFP Seguro - Tu Futuro Protegido</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link rel="stylesheet" href="../CSS/StyleLogin.css"> <link rel="stylesheet" href="../CSS/StyleSeguros.css"> 
+    <link href="../CSS/Style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     
@@ -15,7 +15,7 @@
     
     <div class="promo-overlay">
         <div class="promo-video-container">
-            <label for="cerrar-promo" class="btn-cerrar-promo" title="Cerrar publicidad">&times;</label>
+            <span class="btn-cerrar-promo" title="Cerrar video">&times;</span>
             
             <div class="promo-content">
                 <h3 style="color: white;">¡Tu futuro está en buenas manos!</h3>
@@ -142,12 +142,12 @@
                 </select>
 
                 <label>Número de documento</label>
-                <input type="text" placeholder="Ingresa tu DNI o Pasaporte">
+                <input type="text" id="login-num-doc" placeholder="Ingresa tu DNI o Pasaporte">
 
                 <label>Contraseña</label>
-                <input type="password" placeholder="Ingresa tu contraseña">
+                <input type="password" id="login-pass" placeholder="Ingresa tu contraseña">
 
-                <a href="PrincipalAFP.html"><button class="btn-login-modal">Iniciar sesión</button></a>
+                <button class="btn-login-modal">Iniciar sesión</button>
 
                 <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
 
@@ -171,19 +171,19 @@
 
             <div class="modal-form">
                 <label>Tipo de documento</label>
-                <select>
+                <select id="reg-tipo-doc">
                     <option value="DNI">DNI</option>
                     <option value="PASAPORTE">Pasaporte</option>
                 </select>
 
                 <label>Número de documento</label>
-                <input type="text" placeholder="Ej: 76543212">
+                <input type="text" id="reg-num-doc" placeholder="Ej: 76543212">
 
                 <label>Nombres completos</label>
-                <input type="text" placeholder="Ingresa tus nombres">
+                <input type="text" id="reg-nombres" placeholder="Ingresa tus nombres">
 
                 <label>Apellidos completos</label>
-                <input type="text" placeholder="Ingresa tus apellidos">
+                <input type="text" id="reg-apellidos" placeholder="Ingresa tus apellidos">
 
                 <label>Fecha de nacimiento</label>
                 <input type="date">
@@ -197,19 +197,19 @@
                 </select>
 
                 <label>Correo electrónico</label>
-                <input type="email" placeholder="ejemplo@correo.com">
+                <input type="email" id="reg-correo" placeholder="ejemplo@correo.com">
 
                 <label>Teléfono / Celular</label>
-                <input type="tel" placeholder="Ej: 987 654 321">
+                <input type="tel" id="reg-telefono" placeholder="Ej: 987 654 321">
 
                 <label>Dirección</label>
-                <input type="text" placeholder="Ingresa tu dirección actual">
+                <input type="text" id="reg-direccion" placeholder="Ingresa tu dirección actual">
 
                 <label>Contraseña</label>
                 <input type="password" placeholder="Crea una contraseña segura">
 
                 <label>Confirmar contraseña</label>
-                <input type="password" placeholder="Repite tu contraseña">
+                <input type="password" id="reg-pass" placeholder="Repite tu contraseña">
 
                 <a href="PrincipalAFP.html"><button class="btn-register-modal">Crear mi cuenta</button></a>
 
@@ -353,6 +353,6 @@
 
         </div>
     </footer>
-        
+    <script src="../JAVASCRIPT/javascript.js"></script>
 </body>
 </html>
