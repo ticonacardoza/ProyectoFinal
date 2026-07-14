@@ -624,5 +624,64 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (txt.includes('correo')) correoOverlay.classList.add('visible');
         });
     });
+    
+     
+    // ================================
+    // CARRUSEL HERO
+    // ================================
 
+    const slides = document.querySelector(".slides");
+    const dots = document.querySelectorAll(".dot");
+
+    if(slides && dots.length){
+
+        let slideActual = 0;
+
+        const totalSlides = dots.length;
+
+        function mostrarSlide(indice){
+
+            slideActual = indice;
+            slides.style.transform =
+            `translateX(-${indice*100}%)`;
+            dots.forEach(dot=>dot.classList.remove("active"));
+            dots[indice].classList.add("active");
+
+        }
+
+        dots.forEach((dot,index)=>{
+            dot.addEventListener("click",()=>{
+                mostrarSlide(index);
+                reiniciar();
+
+            });
+
+        });
+
+        let intervalo = setInterval(siguiente,4000);
+        function siguiente(){
+            slideActual++;
+            if(slideActual>=totalSlides){
+                slideActual=0;
+            }
+            mostrarSlide(slideActual);
+        }
+
+        function reiniciar(){
+            clearInterval(intervalo);
+            intervalo=setInterval(siguiente,4000);
+        }
+
+        const hero=document.querySelector(".hero");
+
+        hero.addEventListener("mouseenter",()=>{
+
+            clearInterval(intervalo);
+        });
+
+        hero.addEventListener("mouseleave",()=>{
+
+            reiniciar();
+        });
+    }
 }); 
