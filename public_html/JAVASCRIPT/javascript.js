@@ -625,7 +625,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let totalProyectado = matrizProyeccion[matrizProyeccion.length - 1][1];
             
             // Arreglo bidimensional se ha guardado en la consola
-            respuesta = `¡Cálculo listo! Aportando S/ 150 mensuales, en ${mesesIngresados} meses tendrías S/ ${totalProyectado}.`;
+            respuesta = `¡Cálculo listo! Al aportar S/ 150 mensuales, en ${mesesIngresados} meses tendrías S/ ${totalProyectado}.`;
             console.log("Arreglo Bidimensional generado por Irene:", matrizProyeccion);
 
         } else if (texto.includes('saldo')) {
