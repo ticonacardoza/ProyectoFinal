@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             usuarios.push(nuevoUsuario);
             localStorage.setItem('afp_usuarios', JSON.stringify(usuarios));
             localStorage.setItem('afp_sesion_actual', JSON.stringify(nuevoUsuario));
-            alert("Cuenta creada."); window.location.href = "PrincipalAFP.html";
+            alert("Cuenta creada."); window.location.href = "public_html/Html/PrincipalAFP.html";
         });
     }
 
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const user = usuarios.find(u => u.numeroDocumento === doc && u.contrasena === pass);
             if (user) {
                 localStorage.setItem('afp_sesion_actual', JSON.stringify(user));
-                window.location.href = "Html/PrincipalAFP.html";
+                window.location.href = "public_html/Html/PrincipalAFP.html";
             } else {
                 alert("Credenciales inválidas."); evento.preventDefault();
             }
