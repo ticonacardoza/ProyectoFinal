@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const user = usuarios.find(u => u.numeroDocumento === doc && u.contrasena === pass);
             if (user) {
                 localStorage.setItem('afp_sesion_actual', JSON.stringify(user));
-                window.location.href = "PrincipalAFP.html";
+                window.location.href = "Html/PrincipalAFP.html";
             } else {
                 alert("Credenciales inválidas."); evento.preventDefault();
             }
